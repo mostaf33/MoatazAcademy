@@ -1,234 +1,273 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
 
-
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-text-decoration: none;
-border: none;
-outline: none;
-scroll-behavior: smooth;
-font-family: "poppins", sans-serif;
-}
-:root{
-  --bg-color:#080808;
-  --second-cg-color:#131313;
-  --text-color:white;
-  --main-color:#00b7ff;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "poppins", sans-serif;
 }
 
-html{
-    
+:root {
+  --dark-color: #2ad3e994;
+  --dark2-color: #676a6bd3;
+  --bg-color: #080808;
+  --second-cg-color: #131313;
+  --text-color: white;
+  --main-color: #00b7ff;
+}
+
+.darkmode {
+  --dark-color: #200016;
+  --dark2-color: #10001f;
+  --text-color: white;
+  --main-color: #ff8a03b4;
+}
+
+html {
   font-size: 60%;
   overflow-x: hidden;
 }
-body{
-  background: linear-gradient(#200016,#10001f);
+
+body {
+  background: linear-gradient(var(--dark-color), var(--dark2-color));
   color: var(--text-color);
 }
-.header{
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   padding: 4rem 12% 4rem;
-   background: rgba(0, 0, 0, 0.3);
-   backdrop-filter: blur(10px);
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   z-index: 5;
-}
-.logo{
-    font-size: 3rem;
-    color: var(--text-color);
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-.logo:hover{
-    transform: scale(1.1);
-}
-.logo span{
-    text-shadow: 0 0 25px var(--main-color);
-}
-.navbar a{
-    font-size: 1.8rem;
-    color: var(--text-color);
-    margin-left: 4rem;
-    font-weight: 500;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
-}
-.navbar a:hover,
-.navbar a.active{
-color: var(--main-color);
-border-bottom: 3px solid var(--main-color);
-}
-#menu-icon{
-font-size: 3.6rem;
-color: var(--main-color);
-display: none;
-}
-.container{
-    margin-top: 12rem;
-    width: 100%;
-    padding: 50px;
-}
-.gallery{
-    display: grid;
-    grid-template-columns: repeat(3,auto);
-    gap: 100px;
-}
-.gallery img{
-    width: 75%;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: 0.3s ease;
-    filter: grayscale(100%);
-}
-.gallery img:hover{
-    transform: scale(1.1);
-    filter: grayscale(0);
 
+/* ========== HEADER & NAVBAR ========== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 4rem 12%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
 }
-.ddownload{
-    width:50%;
-    margin-top: 5rem;
-    margin-left: 7rem;
-    border-radius: 20px;
-    text-align: center;
-    font-size: 25px;
-    transition: 0.4s ;
+
+.logo {
+  font-size: 3rem;
+  color: var(--text-color);
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
-.buttom{
-    font-weight: 600;
-    color: aliceblue;
-    
+
+.logo:hover {
+  transform: scale(1.1);
 }
-.ddownload:hover{
-    transform: scale(1.2);
+
+.logo span {
+  text-shadow: 0 0 25px var(--main-color);
 }
-/* From Uiverse.io by Madflows */ 
+
+.navbar a {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+}
+
+#menu-icon {
+  font-size: 3.6rem;
+  color: var(--main-color);
+  display: none;
+}
+
+/* ========== CONTAINER & GALLERY ========== */
+.container {
+  margin-top: 12rem;
+  width: 100%;
+  padding: 50px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 100px;
+}
+
+.gallery img {
+  width: 75%;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease;
+  filter: grayscale(100%);
+  display: block;
+  margin: 0 auto;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0);
+}
+
+/* ========== DOWNLOAD BUTTON ========== */
+.ddownload {
+  width: 50%;
+  margin: 5rem auto 0;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 25px;
+  transition: 0.4s;
+}
+
+.buttom {
+  font-weight: 600;
+  color: aliceblue;
+}
+
+.ddownload:hover {
+  transform: scale(1.2);
+}
+
+/* ========== CUSTOM BUTTON ========== */
 .button {
-position: relative;
-overflow: hidden;
-height: 3rem;
-padding: 0 2rem;
-border-radius: 1.5rem;
-background:var(--main-color);
-background-size: 400%;
-color: #fff;
-border: none;
-cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: var(--main-color);
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
 .button:hover::before {
-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .button-content {
-position: relative;
-z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .button::before {
-content: "";
-position: absolute;
-top: 0;
-left: 0;
-transform: scaleX(0);
-transform-origin: 0 50%;
-width: 100%;
-height: inherit;
-border-radius: inherit;
-background: linear-gradient(
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
     82.3deg,
     rgba(150, 93, 233, 1) 10.8%,
-    rgba(99, 88, 238, 1) 94.3%);
-transition: all 0.475s;
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
 }
 
-@media(max-width:1285px){
-    html{
-        font-size: 55%;
-    }
-}
-@media screen and (max-width:895px){
+/* ========== MEDIA QUERIES ========== */
 
-.header{
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   padding: 4rem 12% 4rem;
-   background: rgba(0, 0, 0, 0.3);
-   backdrop-filter: blur(10px);
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   z-index: 5;
+/* شاشات من 1024 إلى أقل */
+@media (max-width: 1024px) {
+  html {
+    font-size: 55%;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
 }
-.logo{
-    font-size: 25px;
-}
-#menu-icon{
-        display:block;
-    }
-    .navbar{
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 50%;
-        padding: 1rem 3%;
-        background: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(20px);
-        border-bottom-left-radius:2rem;
-        border-left: 2px solid var(--main-color);
-        border-bottom: 2px solid var(--main-color);
-        display: none;
-    }
-.navbar.active{
+
+/* شاشات أقل من 895px */
+@media (max-width: 895px) {
+  .header {
+    padding: 2rem 6%;
+  }
+
+  .logo {
+    font-size: 2.5rem;
+  }
+
+  #menu-icon {
     display: block;
-}
-.navbar a{
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 60%;
+    padding: 1rem 5%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    display: none;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar a {
     display: block;
     font-size: 2rem;
-    margin: 3rem 0;
-    color: rgb(255, 255, 255);
-}
-.container{
+    margin: 2rem 0;
+    color: var(--text-color);
+  }
+
+  .container {
     margin-top: 10rem;
-    width: 90%;
-    padding: 50px;
-}
-.gallery{
-    display: grid;
-    grid-template-columns: repeat(1,auto);
+    width: 95%;
+    padding: 30px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
     gap: 30px;
-}
-.gallery img{
-    margin-left: 22%;
+  }
+
+  .ddownload {
     width: 80%;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: 0.3s ease;
-    filter: grayscale(100%);
-}
-.gallery img:hover{
-    transform: scale(1.1);
-    filter: grayscale(0);
-
-}
-.ddownload{
-    width:80%;
-    margin-top: 2rem;
-    margin-left: 22%;
-    border-radius: 20px;
-    text-align: center;
-    font-size: 25px;
-    transition: 0.4s ;
-}
+    margin: 2rem auto;
+    font-size: 2rem;
+  }
 }
 
+/* هواتف صغيرة جداً */
+@media (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .navbar a {
+    font-size: 1.8rem;
+  }
+
+  .gallery img {
+    width: 90%;
+  }
+
+  .ddownload {
+    font-size: 1.8rem;
+    width: 90%;
+  }
+}

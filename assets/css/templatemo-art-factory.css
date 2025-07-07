@@ -329,17 +329,17 @@ header
 }
 
 .header-area .main-nav {
-  min-height: 80px;
+  min-height: 100px;
   background: transparent;
 }
 
 .header-area .main-nav .logo {
   line-height: 80px;
   color: #fff;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   float: left;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -624,7 +624,8 @@ header
     padding: 0px;
   }
   .header-area .logo {
-    margin-left: 30px;
+        display: block;
+        margin-left: 20px;
   }
   .header-area .menu-trigger {
     display: block !important;
@@ -825,7 +826,7 @@ TRY IT ... with or without CENTER CENTER
 }
 }
 
-@media (max-width: 765px) {
+@media (max-width: 770px) {
   .welcome-area {
     margin-bottom: 70px;
   }
@@ -837,23 +838,19 @@ TRY IT ... with or without CENTER CENTER
   .welcome-area .header-text .buttons {
     display: none;
   }
+
   .welcome-area .header-text h1 {
     font-weight: 600;
     font-size: 24px !important;
     line-height: 30px !important;
-    margin-bottom: 20px !important;
-    margin-top: 40px !important;
+    margin-bottom: 30px !important;
+    margin-top: 150px !important;
   }
   .welcome-area .header-text h1 span {
     color: yellow;
   }
-  .welcome-area .header-text p {
-    text-align: center;
-    color: #fff;
-    font-weight: 400;
-    font-size: 24px;   
-    line-height: 22px;
-    margin-bottom: 40px;
+  .welcome-area .header-text .content1 {
+    display: none;
   }
   .welcome-area .header-text img {
     width: 80%;
