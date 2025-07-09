@@ -12,8 +12,8 @@
 }
 :root {
   --background-color: linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
-  --second-cg-color: #131313;
-  --text-color: white;
+  --second-cg-color: #c7c7c79f;
+  --text-color: rgb(0, 0, 0);
   --main-color: #00b7ff;
   --dark-color: #00e1ff;
   --dark2-color: #676a6bd3;
@@ -22,7 +22,7 @@
 .darkmode {
   --background-color: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   --second-cg-color: #1c1c1c; 
-  --text-color: rgb(0, 0, 0);
+  --text-color: white;
   --main-color: #00b7ff;
   --dark-color: #2727f7;
   --dark2-color: #676a6bd3;
